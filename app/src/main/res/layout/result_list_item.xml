@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="@dimen/card_radius"
+        card_view:cardElevation="@dimen/card_elevation"
+        android:layout_margin="1dp">
+        <!--android:foreground="?android:attr/selectableItemBackground"-->
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/result_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#c51431"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:layout_alignParentTop="true"
+                android:paddingStart="10sp"
+                android:paddingEnd="10sp"/>
+            <View
+                android:id="@+id/divider"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_below="@+id/result_name"/>
+            <TextView
+                android:id="@+id/result_description"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="11"
+                android:textColor="#626567"
+                android:layout_below="@+id/divider"
+                android:paddingStart="10sp"
+                android:paddingEnd="10sp"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/selectPersonCheckBox"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

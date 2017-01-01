@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/content_send_email"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:paddingBottom="@dimen/activity_vertical_margin"
+android:paddingLeft="@dimen/activity_horizontal_margin"
+android:paddingRight="@dimen/activity_horizontal_margin"
+android:paddingTop="@dimen/activity_vertical_margin"
+app:layout_behavior="@string/appbar_scrolling_view_behavior"
+tools:context="adonay.wpidirectory.SendEmailActivity"
+tools:showIn="@layout/activity_send_email"
+android:orientation="vertical">
+
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/front_form_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/wpi_logo"
+            android:src="@drawable/wpi_logo"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/wpi_logo"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/send_mail_label"
+            android:id="@+id/message3"
+            android:textColor="#c51431"
+            android:textStyle="bold"
+            android:layout_below="@+id/wpi_logo"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/email_client_hint"
+            android:id="@+id/email_client_hint"
+            android:textColor="#626567"
+            android:layout_below="@+id/message3"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mail_subject"
+            android:id="@+id/mail_subject_label"
+            android:layout_below="@+id/email_client_hint"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="#c51431"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="@dimen/editTextSize"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/subject_input"
+            android:textSize="14sp"
+            android:backgroundTint="#626567"
+            android:layout_below="@+id/mail_subject_label"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mail_message_label"
+            android:id="@+id/mail_message_label"
+            android:textStyle="bold"
+            android:textColor="#c51431"
+            android:layout_below="@+id/subject_input"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <EditText
+            android:layout_width="@dimen/editTextSize"
+            android:layout_height="200dp"
+            android:inputType="textMultiLine"
+            android:gravity="start"
+            android:id="@+id/mail_message_input"
+            android:backgroundTint="#626567"
+            android:textSize="14sp"
+            android:layout_below="@+id/mail_message_label"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/send_mail_button_text"
+            android:id="@+id/send_message_button"
+            android:backgroundTint="#ffffff"
+            android:textColor="#c51431"
+            android:layout_below="@+id/mail_message_input"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+</ScrollView>
+
+
+</RelativeLayout>

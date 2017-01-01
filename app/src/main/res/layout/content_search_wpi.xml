@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".SearchResultActivity"
+    tools:showIn="@layout/activity_search_wpi"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RelativeLayout
+            android:id="@+id/front_form_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/wpi_logo"
+                android:src="@drawable/wpi_logo"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/wpi_logo"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_directory"
+                android:id="@+id/message1"
+                android:textColor="#c51431"
+                android:textStyle="bold"
+                android:layout_below="@+id/wpi_logo"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/person"
+                android:id="@+id/person"
+                android:layout_below="@+id/message1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textColor="#c51431"
+                android:textStyle="bold" />
+
+            <EditText
+                android:imeOptions="flagNoExtractUi"
+                android:layout_width="@dimen/editTextSize"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/name_input"
+                android:textSize="14sp"
+                android:backgroundTint="#626567"
+                android:layout_below="@+id/person"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup"
+                android:layout_below="@+id/name_input"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name"
+                    android:id="@+id/name_radio"
+                    android:checked="true"
+                    android:textSize="12sp"
+                    android:textColor="#626567"
+                    android:buttonTint="#626567"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/username"
+                    android:id="@+id/user_radio"
+                    android:checked="false"
+                    android:textSize="12sp"
+                    android:textColor="#626567"
+                    android:buttonTint="#626567" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title"
+                android:id="@+id/title"
+                android:textStyle="bold"
+                android:textColor="#c51431"
+                android:layout_below="@+id/radioGroup"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
+
+            <EditText
+                android:imeOptions="flagNoExtractUi"
+                android:layout_width="@dimen/editTextSize"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:id="@+id/title_input"
+                android:backgroundTint="#626567"
+                android:textSize="14sp"
+                android:layout_below="@+id/title"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/department"
+                android:id="@+id/department"
+                android:textColor="#c51431"
+                android:textStyle="bold"
+                android:layout_below="@+id/title_input"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
+
+            <EditText
+                android:imeOptions="flagNoExtractUi"
+                android:layout_width="@dimen/editTextSize"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:text=""
+                android:id="@+id/department_input"
+                android:backgroundTint="#626567"
+                android:textSize="14sp"
+                android:layout_below="@+id/department"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/groups"
+                android:id="@+id/groupsText"
+                android:textColor="#c51431"
+                android:textStyle="bold"
+                android:layout_below="@+id/department_input"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
+
+            <LinearLayout
+                android:id="@+id/checkboxHolder"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/groupsText">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/isStudents"
+                    android:checked="true"
+                    android:text="@string/students"
+                    android:textColor="#626567"
+                    android:backgroundTint="#626567"
+                    android:layout_weight="1" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/isAlumni"
+                    android:checked="true"
+                    android:text="@string/alumni"
+                    android:textColor="#626567"
+                    android:backgroundTint="#626567"
+                    android:layout_weight="1" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/isStaff"
+                    android:checked="true"
+                    android:text="@string/staff"
+                    android:textColor="#626567"
+                    android:backgroundTint="#626567"
+                    android:layout_weight="1" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/isFaculty"
+                    android:checked="true"
+                    android:text="@string/faculty"
+                    android:textColor="#626567"
+                    android:backgroundTint="#626567"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search"
+                android:id="@+id/search_button"
+                android:backgroundTint="#ffffff"
+                android:textColor="#c51431"
+                android:layout_below="@+id/checkboxHolder"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
